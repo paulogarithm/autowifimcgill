@@ -1,9 +1,3 @@
-// change this for whatever you want if its not study permit in france
-const yourLoginCredentials = {
-    name: "pol",
-    email: "anyone@example.com"
-}
-
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const getElementTimeout = async (id, retries) => {
