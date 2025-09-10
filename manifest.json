@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "je veux du wifi mcgill svp",
+  "version": "42",
+  "description": "ca remplit les champs sur mcgill avec ce que tu mets",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://guest-login.it.mcgill.ca/guest/social_register.php*"],
+      "js": ["register.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://guest-login.it.mcgill.ca/guest/social_login.php*"],
+      "js": ["login.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://guest-login.it.mcgill.ca/guest/social_register_receipt.php*"],
+      "js": ["receipt.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
